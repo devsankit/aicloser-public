@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: FeaturePageProps): Promise<Me
     title: feature.seoTitle,
     description: feature.seoDescription,
     alternates: { canonical: `/features/${feature.slug}` },
-    openGraph: { type: 'article', title: feature.seoTitle, description: feature.seoDescription, url: `https://closer.gigxomi.com/features/${feature.slug}`, images: [{ url: feature.image, alt: feature.name }] },
+    openGraph: { type: 'article', title: feature.seoTitle, description: feature.seoDescription, url: `https://aicloser.in/features/${feature.slug}`, images: [{ url: feature.image, alt: feature.name }] },
     twitter: { card: 'summary_large_image', title: feature.seoTitle, description: feature.seoDescription, images: [feature.image] },
   };
 }
@@ -28,7 +28,7 @@ export default async function FeatureDetailPage({ params }: FeaturePageProps) {
   if (!feature) notFound();
 
   const related = features.filter((item) => item.slug !== feature.slug && item.category === feature.category).slice(0, 3);
-  const breadcrumbData = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://closer.gigxomi.com/' }, { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://closer.gigxomi.com/features' }, { '@type': 'ListItem', position: 3, name: feature.name, item: `https://closer.gigxomi.com/features/${feature.slug}` }] };
+  const breadcrumbData = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aicloser.in/' }, { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://aicloser.in/features' }, { '@type': 'ListItem', position: 3, name: feature.name, item: `https://aicloser.in/features/${feature.slug}` }] };
   const faqData = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: feature.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
 
   return (

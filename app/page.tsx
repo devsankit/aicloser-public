@@ -175,7 +175,9 @@ function enhanceLegacyMarkup(markup: string): string {
       /<div class="testimonial-row">([\s\S]*?)<\/div><div class="testimonial-row reverse">([\s\S]*?)<\/div><\/div><\/section>/,
       (_match, firstRow, secondRow) => `<div class="testimonial-row">${firstRow}${firstRow}</div><div class="testimonial-row reverse">${secondRow}${secondRow}</div></div></section>`,
     )
-    .replaceAll(`href="${APP_SIGNUP_URL}"`, `href="${WHATSAPP_DEMO_URL}" data-demo-trigger`);
+    .replaceAll(`href="${APP_SIGNUP_URL}"`, `href="${WHATSAPP_DEMO_URL}" data-demo-trigger`)
+    .replaceAll('https://closer.gigxomi.com/login', APP_LOGIN_URL)
+    .replaceAll('https://closer.gigxomi.com', 'https://aicloser.in');
 
   return `${enhanced}${renderDemoDialog()}`;
 }
