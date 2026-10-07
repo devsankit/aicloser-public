@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "project": {
+    "name": "https-ai-closer-framer-website-https-ai-closer",
+    "productType": null,
+    "stack": []
+  },
+  "sources": {
+    "tokens": [],
+    "components": [],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "unknown",
+    "colors": {},
+    "typography": {},
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    "AI Closer uses a CSS-built orange AI badge with the Closer wordmark across light, orange, and dark surfaces.",
+    "Conversion CTAs use the label Get Free Demo; the accessible form sends submitted context to the official AI Closer WhatsApp number, with a direct support bubble for help."
+  ],
+  "evidence": [],
+  "generatedAt": "2026-10-06T04:16:07.672Z"
+}
