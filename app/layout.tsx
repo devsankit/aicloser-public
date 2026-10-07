@@ -111,14 +111,37 @@ export const metadata: Metadata = {
     description: 'Record calls, manage leads, and coach your sales team from one connected workspace.',
     images: ['/assets/reference/hero-dashboard.png'],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en">
       <body>
+        {gaMeasurementId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        ) : null}
         {children}
         <script
           type="application/ld+json"
