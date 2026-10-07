@@ -9,7 +9,13 @@ const WHATSAPP_NUMBER = '919589510954';
 const WHATSAPP_DEMO_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello AI Closer, I would like to book a free demo.')}`;
 
 function renderCssLogo(surfaceClass = 'css-logo-light'): string {
-  return `<span class="css-logo ${surfaceClass}"><span class="css-logo-mark">AI</span><span class="css-logo-word">Closer</span></span>`;
+  if (surfaceClass === 'css-logo-dark') {
+    return '<img src="/assets/closer-logo-dark.png" alt="AI Closer" class="closer-logo-image" style="height:32px;width:auto;" />';
+  }
+  if (surfaceClass === 'css-logo-orange') {
+    return '<img src="/assets/closer-logo-dark.png" alt="AI Closer" class="closer-logo-image" style="height:32px;width:auto;" />';
+  }
+  return '<img src="/assets/closer-logo.png" alt="AI Closer" class="closer-logo-image" style="height:32px;width:auto;" />';
 }
 
 // These are the canonical Lucide paths used by the shared React header. The

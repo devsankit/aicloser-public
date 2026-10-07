@@ -87,6 +87,15 @@ export const metadata: Metadata = {
   description: 'AI Closer is a SIM-based sales CRM from Gigxomi for recording calls, managing leads, automating follow-ups, and coaching sales teams.',
   keywords: ['SIM based CRM India', 'sales CRM for small business', 'sales call recording software', 'lead management software', 'video editing company CRM', 'AI sales coaching'],
   alternates: { canonical: '/' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',

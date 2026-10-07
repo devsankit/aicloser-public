@@ -11,10 +11,14 @@ type NavKey = 'home' | 'features' | 'pricing' | 'about' | 'blog';
 
 function Logo({ dark = false }: { dark?: boolean }) {
   return (
-    <span className={`css-logo ${dark ? 'css-logo-dark' : 'css-logo-light'}`}>
-      <span className="css-logo-mark">AI</span>
-      <span className="css-logo-word">Closer</span>
-    </span>
+    <img
+      src={dark ? "/assets/closer-logo-dark.png" : "/assets/closer-logo.png"}
+      alt="AI Closer"
+      className="closer-logo-image"
+      width={124}
+      height={38}
+      style={{ height: '32px', width: 'auto', display: 'inline-block' }}
+    />
   );
 }
 
@@ -109,7 +113,7 @@ export function MarketingFooter() {
         <div><h4>PRODUCT</h4><a href="/">Home</a><a href="/features">Features</a><a href="/about">About us</a><a href="/pricing">Pricing</a><a href={loginUrl}>Login</a><a href={demoUrl} data-demo-trigger>Get Free Demo</a></div>
         <div><h4>CONNECT</h4><a href="https://www.facebook.com/AICloser.in" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/aicloser.in/" target="_blank" rel="noopener noreferrer">Instagram</a><a href={supportUrl}>WhatsApp</a></div>
       </div>
-      <div className="footer-bottom"><span className="footer-bottom-logo"><span className="css-logo css-logo-dark"><span className="css-logo-mark">AI</span><span className="css-logo-word">Closer</span></span></span><span>© 2026 AI Closer. All rights reserved. Powered by Gigxomi</span><a href="/about#terms">Terms of Service</a></div>
+      <div className="footer-bottom"><span className="footer-bottom-logo"><Logo dark={true} /></span><span>© 2026 AI Closer. All rights reserved. Powered by Gigxomi</span><a href="/about#terms">Terms of Service</a></div>
     </footer>
   );
 }
