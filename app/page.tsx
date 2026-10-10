@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import SiteShell from './site-shell';
 import { features } from '../lib/features';
+import { fetchLiveBlogPosts } from '../lib/blog-posts';
+
+export const revalidate = 60;
 
 const APP_LOGIN_URL = 'https://app.aicloser.in/login';
 const APP_SIGNUP_URL = 'https://app.aicloser.in/signup';
@@ -175,6 +178,35 @@ function readLegacyMarkup(): string {
   return enhanceLegacyMarkup(body.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ''));
 }
 
-export default function HomePage() {
-  return <SiteShell markup={readLegacyMarkup()} />;
+export default async function HomePage() {
+  let markup = readLegacyMarkup();
+  try {
+    const livePosts = await fetchLiveBlogPosts();
+    if (livePosts && livePosts.length >= 3) {
+      const top3 = livePosts.slice(0, 3);
+      const featureCovers = [
+        '/assets/features/salesperson-sim-support.png',
+        '/assets/features/lead-management.png',
+        '/assets/features/automatic-sales-call-recording.png',
+      ];
+      const liveCardsMarkup = top3
+        .map(
+          (post, idx) => `
+        <a class="blog-card reveal ${idx === 1 ? 'delay-1' : idx === 2 ? 'delay-2' : ''}" href="/blog/${post.slug}" style="--card-image: url('${featureCovers[idx % featureCovers.length]}');">
+          <small>${post.date}</small>
+          <h3>${post.title}</h3>
+          <span>Read story ${legacyArrowUpRight}</span>
+        </a>`,
+        )
+        .join('');
+      markup = markup.replace(
+        /<div class="blog-grid">[\s\S]*?<\/div>/,
+        `<div class="blog-grid">${liveCardsMarkup}</div>`,
+      );
+    }
+  } catch {
+    // Graceful fallback to static high-authority articles in legacy.html
+  }
+
+  return <SiteShell markup={markup} />;
 }
