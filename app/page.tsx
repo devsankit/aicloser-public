@@ -132,7 +132,7 @@ function enhanceLegacyMarkup(markup: string): string {
     .replace('<a href="#about">About</a>', '<a href="/about">About</a>')
     .replace('<a href="#blog">Blog</a>', '<a href="/blog">Blog</a>')
     .replace(/(<a class="nav-contact"[^>]*>Get Free Demo )<span[^>]*>[^<]*<\/span>/, `$1${legacyArrowUpRight}`)
-    .replace('<a href="#contact">Terms of Service</a>', '<span class="powered-by">Powered by Gigxomi</span><a href="#contact">Terms of Service</a>')
+    .replace('<a href="#contact">Terms of Service</a>', '<a href="#contact">Terms of Service</a>')
     .replace(
       'The all-in-one CRM built for high-growth teams. Automate your pipeline and<br class="desktop-only" /> focus on what matters: your customers.',
       'Record every sales call, route every lead, and coach your team from one connected workspace.',

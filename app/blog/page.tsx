@@ -1,3 +1,27 @@
+
+const BLOG_IMAGES = [
+  '/assets/features/automatic-sales-call-recording.png',
+  '/assets/features/salesperson-sim-support.png',
+  '/assets/features/lead-management.png',
+  '/assets/features/centralized-call-history.png',
+  '/assets/features/lead-distribution-assignment.png',
+  '/assets/features/sales-team-mobile-app.png',
+  '/assets/features/admin-dashboard.png',
+  '/assets/features/customer-intent-objection-analysis.png',
+  '/assets/features/team-activity-monitoring.png',
+  '/assets/features/follow-up-management.png',
+  '/assets/features/call-recording-playback.png',
+  '/assets/features/salesperson-performance-tracking.png',
+  '/assets/features/salesperson-coaching-insights.png',
+  '/assets/features/lead-pipeline-management.png',
+  '/assets/features/sales-conversation-insights.png',
+  '/assets/features/call-notes.png',
+  '/assets/features/notifications-reminders.png',
+  '/assets/reference/hero-dashboard.png',
+  '/assets/reference/feature-analytics.png',
+  '/assets/reference/realtime-sync.png'
+];
+
 import type { Metadata } from 'next';
 import { MarketingLayout } from '../marketing-layout';
 import { fetchLiveBlogPosts } from '../../lib/blog-posts';
@@ -25,7 +49,7 @@ export default async function BlogPage() {
               className="article-card"
               href={`/blog/${post.slug}`}
               key={post.slug}
-              style={{ backgroundImage: `linear-gradient(180deg, rgba(16,16,16,.08), rgba(16,16,16,.9)), url('/assets/reference/blog-${(index % 3) + 1}.jpg')` }}
+              style={{ backgroundImage: `linear-gradient(180deg, rgba(16,16,16,.2), rgba(16,16,16,.92)), url('${BLOG_IMAGES[index % BLOG_IMAGES.length]}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               <small>{post.date}</small>
               <h2>{post.title}</h2>

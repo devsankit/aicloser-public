@@ -7,7 +7,7 @@ export const whatsappNumber = '919589510954';
 export const demoUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello AI Closer, I would like to book a free demo.')}`;
 export const supportUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello AI Closer, I need support.')}`;
 
-type NavKey = 'home' | 'features' | 'pricing' | 'about' | 'blog';
+type NavKey = 'home' | 'features' | 'pricing' | 'about' | 'blog' | 'contact';
 
 function Logo({ dark = false }: { dark?: boolean }) {
   return (
@@ -36,6 +36,7 @@ export function MarketingHeader({ active }: { active: NavKey }) {
     ['pricing', 'Pricing', '/pricing'],
     ['about', 'About', '/about'],
     ['blog', 'Blog', '/blog'],
+    ['contact', 'Contact', '/contact'],
   ];
 
   return (
@@ -110,10 +111,10 @@ export function MarketingFooter() {
       </div>
       <div className="footer-grid">
         <div><a className="brand" href="/"><Logo /></a><p className="footer-note">AI Closer is the SIM-based sales CRM built inside Gigxomi for teams that want every call and follow-up to count.</p></div>
-        <div><h4>PRODUCT</h4><a href="/">Home</a><a href="/features">Features</a><a href="/about">About us</a><a href="/pricing">Pricing</a><a href={loginUrl}>Login</a><a href={demoUrl} data-demo-trigger>Get Free Demo</a></div>
+        <div><h4>PRODUCT</h4><a href="/">Home</a><a href="/features">Features</a><a href="/about">About us</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a><a href={loginUrl}>Login</a><a href={demoUrl} data-demo-trigger>Get Free Demo</a></div>
         <div><h4>CONNECT</h4><a href="https://www.facebook.com/AICloser.in" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/aicloser.in/" target="_blank" rel="noopener noreferrer">Instagram</a><a href={supportUrl}>WhatsApp</a></div>
       </div>
-      <div className="footer-bottom"><span className="footer-bottom-logo"><Logo dark={true} /></span><span>© 2026 AI Closer. All rights reserved. Powered by Gigxomi</span><a href="/about#terms">Terms of Service</a></div>
+      <div className="footer-bottom"><span className="footer-bottom-logo"><Logo dark={true} /></span><span>© 2026 AI Closer. All rights reserved.</span><a href="/about#terms">Terms of Service</a></div>
     </footer>
   );
 }
