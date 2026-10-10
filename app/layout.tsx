@@ -31,11 +31,11 @@ const structuredData = {
       },
       offers: {
         '@type': 'Offer',
-        price: '299',
+        price: '399',
         priceCurrency: 'INR',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '299',
+          price: '399',
           priceCurrency: 'INR',
           unitText: 'user/month',
         },
@@ -57,7 +57,7 @@ const structuredData = {
           name: 'Why choose a SIM-based CRM over cloud telephony like Exotel or TeleCRM?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Cloud telephony uses virtual numbers that often get flagged as spam, leading to poor pickup rates (30-40%) and expensive per-minute charges. AI Closer uses standard mobile SIM cards, delivering 95%+ pickup rates, zero per-minute calling charges, and crystal-clear call quality at just ₹299/user/month.',
+            text: 'Cloud telephony uses virtual numbers that often get flagged as spam, leading to poor pickup rates (30-40%) and expensive per-minute charges. AI Closer uses standard mobile SIM cards, delivering 95%+ pickup rates, zero per-minute calling charges, and crystal-clear call quality at just ₹399/user/month.',
           },
         },
         {
@@ -78,7 +78,7 @@ const structuredData = {
         },
         {
           '@type': 'Question',
-          name: 'What is included in the ₹299/user/month pricing plan?',
+          name: 'What is included in the ₹399/user/month pricing plan?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Everything is included with zero hidden fees: automatic SIM call recording, Android mobile app, admin dashboard, lead management, visual pipeline, WhatsApp integration, centralized audio playback, and AI sales conversation insights.',
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     default: 'AI Closer — SIM-Based Sales CRM & Automatic Call Recording',
     template: '%s | AI Closer',
   },
-  description: "AI Closer is India's premier SIM-based sales CRM. Record calls directly from your SIM, manage leads, automate follow-ups, and coach sales teams at ₹299/mo.",
+  description: "AI Closer is India's premier SIM-based sales CRM. Record calls directly from your SIM, manage leads, automate follow-ups, and coach sales teams at ₹399/mo.",
   keywords: [
     'AI Closer',
     'AI Closer CRM',
@@ -124,13 +124,13 @@ export const metadata: Metadata = {
     url: 'https://aicloser.in',
     siteName: 'AI Closer',
     title: 'AI Closer — SIM-Based Sales CRM & Automatic Call Recording',
-    description: 'Automatically record sales calls from your SIM, manage leads, automate follow-ups, and coach sales teams with AI Closer at ₹299/mo.',
+    description: 'Automatically record sales calls from your SIM, manage leads, automate follow-ups, and coach sales teams with AI Closer at ₹399/mo.',
     images: [{ url: '/assets/reference/hero-dashboard.png', alt: 'AI Closer sales CRM dashboard' }],
   },
   twitter: {
     card: 'summary',
     title: 'AI Closer — SIM-Based Sales CRM & Automatic Call Recording',
-    description: 'Automatically record sales calls from your SIM, manage leads, automate follow-ups, and coach sales teams with AI Closer at ₹299/mo.',
+    description: 'Automatically record sales calls from your SIM, manage leads, automate follow-ups, and coach sales teams with AI Closer at ₹399/mo.',
     images: ['/assets/reference/hero-dashboard.png'],
   },
   verification: {

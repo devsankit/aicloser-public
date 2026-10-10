@@ -104,7 +104,7 @@ function renderPricingSection(): string {
           <p class="pricing-eyebrow">AI CLOSER SALES WORKSPACE</p>
           <h3>Close more conversations with one connected system.</h3>
         </div>
-        <div class="pricing-price"><strong>₹299</strong><span>/ user / month</span></div>
+        <div class="pricing-price"><strong>₹399</strong><span>/ user / month</span></div>
       </div>
       <div class="pricing-card-body">
         <div>
