@@ -58,7 +58,7 @@ function renderDemoDialog(): string {
     </form>
   </dialog>
   <div class="whatsapp-hint" aria-hidden="true">Hi, I&apos;m here to help you out<span class="whatsapp-hint-tail"></span></div>
-  <a class="whatsapp-support" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello AI Closer, I need support.') }" aria-label="Chat with AI Closer support on WhatsApp">
+  <a class="whatsapp-support" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello AI Closer, I need support.')}" aria-label="Chat with AI Closer support on WhatsApp">
     <span class="whatsapp-support-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M19.1 4.9A9.9 9.9 0 0 0 3.5 16.8L2 22l5.3-1.5A9.9 9.9 0 1 0 19.1 4.9Zm-7.2 15.3c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.1.9.9-3-.2-.3a8.2 8.2 0 1 1 7.2 3.8Zm4.5-6.1c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.7.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1 0-.2-.2-.3-.4-.4Z"/></svg></span><span class="sr-only">WhatsApp support</span>
   </a>`;
 }
@@ -93,7 +93,7 @@ function renderPricingSection(): string {
     <div class="pricing-intro">
       <div class="section-label">SIMPLE, CLEAR PRICING</div>
       <h2 id="pricing-title">Everything your sales team needs<span class="accent">.</span></h2>
-      <p>One focused workspace for calls, leads, follow-ups, team performance, and AI-powered sales coaching.</p>
+      <p>One focused workspace for SIM call recording, lead management, follow-ups, team performance, and AI-powered sales coaching.</p>
     </div>
     <article class="pricing-card" aria-label="AI Closer monthly plan">
       <div class="pricing-card-header">
@@ -132,15 +132,7 @@ function enhanceLegacyMarkup(markup: string): string {
     .replace('<a href="#about">About</a>', '<a href="/about">About</a>')
     .replace('<a href="#blog">Blog</a>', '<a href="/blog">Blog</a>')
     .replace(/(<a class="nav-contact"[^>]*>Get Free Demo )<span[^>]*>[^<]*<\/span>/, `$1${legacyArrowUpRight}`)
-    .replace('<a href="#contact">Terms of Service</a>', '<a href="#contact">Terms of Service</a>')
-    .replace(
-      'The all-in-one CRM built for high-growth teams. Automate your pipeline and<br class="desktop-only" /> focus on what matters: your customers.',
-      'Record every sales call, route every lead, and coach your team from one connected workspace.',
-    )
-    .replace(
-      'Eliminate the lag in communication. Our real-time sync ensures your team always works on the latest version of every task and project.',
-      'AI Closer was born inside Gigxomi, a video editing company that needed a better way to manage sales calls, SIM-based outreach, leads, and follow-ups. We built the system our own team needed, then opened it to business owners who want a practical sales CRM.',
-    );
+    .replace('<a href="#contact">Terms of Service</a>', '<a href="#contact">Terms of Service</a>');
 
   // Render the CSS lockup in the first HTML response so the brand never
   // flashes the legacy diamond mark while the client enhancement loads.
@@ -155,18 +147,12 @@ function enhanceLegacyMarkup(markup: string): string {
     .replace('<div class="footer-bottom">', `<div class="footer-bottom"><span class="footer-bottom-logo">${renderCssLogo('css-logo-dark')}</span>`)
     .replaceAll('14 DAYS FREE · NO CREDIT CARD · 1-MINUTE SETUP', 'FREE DEMO · PERSONALIZED WALKTHROUGH · NO COMMITMENT')
     .replace(/Ended in:\s*<b data-countdown>[^<]*<\/b>/g, 'Book a demo in minutes')
-    .replace('Stay Updated, Instantly.', 'Built from a real sales floor.')
-    .replace('Streamline<br />your', 'Streamline <br /> your')
-    .replace('What users<br />are saying', 'What users <br /> are saying')
-    .replace('Sales Insights<br />&amp; Strategies', 'Sales Insights <br /> &amp; Strategies')
     .replaceAll('https://www.instagram.com/', 'https://www.instagram.com/aicloser.in/')
     .replaceAll('https://www.facebook.com/', 'https://www.facebook.com/AICloser.in')
     .replaceAll('<span>→</span>', legacyArrow)
     .replaceAll('<span class="arrow">↗</span>', legacyArrowUpRight)
     .replaceAll('Read story ↗', `Read story ${legacyArrowUpRight}`)
     .replaceAll('<span>＋</span>', renderLucideIcon('icon-inline faq-plus', 16, '<path d="M5 12h14"/><path d="M12 5v14"/>'))
-    .replace('Stay Updated,<br />Instantly<span class="accent">.</span>', 'Built from a real sales floor.')
-    .replace('<span>Dark Mode</span><span>Drag &amp; Drop</span><span>Open API</span>', '<span>Dark Mode</span><span>Drag &amp; Drop</span><span>Open API</span><span>Claude</span><span>OpenAI</span><span>Antigravity Supported</span>')
     .replace('<a class="blog-card reveal" href="#blog">', '<a class="blog-card reveal" href="/blog/sales-call-recording-for-growing-teams">')
     .replace('<a class="blog-card reveal delay-1" href="#blog">', '<a class="blog-card reveal delay-1" href="/blog/lead-distribution-and-follow-up-management">')
     .replace('<a class="blog-card reveal delay-2" href="#blog">', '<a class="blog-card reveal delay-2" href="/blog/sales-coaching-from-real-conversations">')
