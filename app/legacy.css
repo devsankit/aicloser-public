@@ -317,7 +317,7 @@ h1,h2,h3,h4,.brand,.hero-title,.feature-card h3,.showcase-copy h3,.step h3,.powe
   .features-showcase .integration-art{width:52%;height:auto;min-height:520px;margin:0;transform:none}
   .features-showcase .showcase-visual{height:100%;min-height:520px;border-radius:0 22px 22px 0;background:linear-gradient(145deg,#dc4c08,#ff6b2f);box-shadow:none}
   .blog-grid .image-card{min-height:464px}
-  .site-footer{position:relative;padding-top:24px;padding-bottom:112px}
+  .site-footer{position:relative;padding-top:24px;padding-bottom:24px}
   .site-footer .newsletter{min-height:310px;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:44px 40px 42px;border:0;border-radius:18px;background:#f1f1f2}
   .site-footer .newsletter>div:first-child{grid-column:1}
   .site-footer .newsletter form{grid-column:1;align-self:end;margin-top:30px}
@@ -897,3 +897,13 @@ body .faq-cta h3,body .testimonial-row blockquote footer{font-family:'Google San
 .blog-card:nth-child(1) { --card-image: url('/assets/features/salesperson-sim-support.png') !important; }
 .blog-card:nth-child(2) { --card-image: url('/assets/features/lead-management.png') !important; }
 .blog-card:nth-child(3) { --card-image: url('/assets/features/automatic-sales-call-recording.png') !important; }
+
+/* Compact footer bottom spacing - removes excessive dead whitespace under the footer pill */
+.site-footer {
+  padding-bottom: 24px !important;
+}
+@media (max-width: 620px) {
+  .site-footer {
+    padding-bottom: 20px !important;
+  }
+}
