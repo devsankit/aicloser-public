@@ -111,22 +111,14 @@ function updateFlowLinesGeometry() {
   const svg = document.querySelector('.flow-lines svg');
   if (!svg) return;
   const w = Math.max(window.innerWidth || 1440, 1440);
-  const cx = w / 2;
-  const cradleWidth = 460;
-  const slopeWidth = 90;
-  const leftCradle = Math.round(cx - cradleWidth / 2);
-  const rightCradle = Math.round(cx + cradleWidth / 2);
-  const leftSlope = Math.round(leftCradle - slopeWidth);
-  const rightSlope = Math.round(rightCradle + slopeWidth);
 
-  svg.setAttribute('viewBox', `0 0 ${w} 140`);
+  svg.setAttribute('viewBox', `0 0 ${w} 60`);
   svg.setAttribute('preserveAspectRatio', 'none');
 
   const paths = svg.querySelectorAll('path');
   paths.forEach((path, index) => {
-    const y = index < 2 ? 22 : 72;
-    const curveY = y + 36;
-    const d = `M 0 ${y} L ${leftSlope} ${y} L ${leftCradle} ${curveY} L ${rightCradle} ${curveY} L ${rightSlope} ${y} L ${w} ${y}`;
+    const y = index < 2 ? 16 : 44;
+    const d = `M 0 ${y} L ${w} ${y}`;
     path.setAttribute('d', d);
     if (index % 2 === 1) {
       path.setAttribute('pathLength', '1000');
