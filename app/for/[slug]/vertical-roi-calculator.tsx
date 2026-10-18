@@ -11,7 +11,7 @@ type VerticalRoiCalculatorProps = {
 
 export function VerticalRoiCalculator({ slug }: VerticalRoiCalculatorProps) {
   // If not one of the 4 specialized verticals, fall back to the generic telephony savings calculator
-  if (!['real-estate-crm', 'loan-dsa-calling-crm', 'edtech-admissions-dialer', 'insurance-posp-crm'].includes(slug)) {
+  if (!['real-estate-crm', 'loan-dsa-calling-crm', 'edtech-admissions-dialer', 'insurance-posp-crm', 'automobile-dealership-crm', 'healthcare-clinic-crm'].includes(slug)) {
     return <TelephonySavingsCalculator />;
   }
 
@@ -27,6 +27,13 @@ export function VerticalRoiCalculator({ slug }: VerticalRoiCalculatorProps) {
   if (slug === 'insurance-posp-crm') {
     return <InsurancePospRoiCalculator />;
   }
+  if (slug === 'automobile-dealership-crm') {
+    return <AutomobileDealershipRoiCalculator />;
+  }
+  if (slug === 'healthcare-clinic-crm') {
+    return <HealthcareClinicRoiCalculator />;
+  }
+
 
   return <TelephonySavingsCalculator />;
 }
@@ -739,3 +746,256 @@ const ctaButtonStyle: React.CSSProperties = {
   textDecoration: 'none',
   boxShadow: '0 8px 20px rgba(34, 197, 94, 0.3)',
 };
+
+// -------------------------------------------------------------
+// 5. Automobile Dealership Vertical Calculator
+// -------------------------------------------------------------
+function AutomobileDealershipRoiCalculator() {
+  const [dseAgents, setDseAgents] = useState(6);
+  const [monthlyInquiries, setMonthlyInquiries] = useState(400);
+  const [avgMargin, setAvgMargin] = useState(45000);
+
+  const connectedVoip = Math.round(monthlyInquiries * 0.28);
+  const connectedSim = Math.round(monthlyInquiries * 0.92);
+  const extraConnects = connectedSim - connectedVoip;
+  const extraTestDrives = Math.max(1, Math.round(extraConnects * 0.12));
+  const extraCarSales = Math.max(1, Math.round(extraTestDrives * 0.22));
+  const extraGrossProfit = extraCarSales * avgMargin;
+  const aiCloserCost = dseAgents * 399;
+  const telephonySavings = dseAgents * 1800;
+  const netGain = extraGrossProfit + telephonySavings;
+  const roiMultiplier = Math.round(netGain / Math.max(1, aiCloserCost));
+
+  const fmt = (n: number) => n.toLocaleString('en-IN');
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    `Hello AI Closer, our auto dealership has ${dseAgents} DSEs handling ${monthlyInquiries} monthly car leads. Show us how to get ${extraTestDrives} extra test drives!`
+  )}`;
+
+  return (
+    <div style={calcContainerStyle}>
+      <span style={calcBadgeStyle}>AUTOMOBILE SHOWROOM ROI ESTIMATOR</span>
+      <h3 style={calcHeadingStyle}>Calculate Test Drive & Sales Uplift for Your Dealership</h3>
+      <p style={calcSubtitleStyle}>
+        See how switching from spam-flagged virtual numbers to authentic SIM calling unlocks 3x more showroom walk-ins and converts high-intent car buyers before they visit competitors.
+      </p>
+
+      <div style={slidersGridStyle}>
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Sales Executives (DSEs):</span>
+            <span style={sliderValueStyle}>{dseAgents} DSEs</span>
+          </div>
+          <input
+            type="range"
+            min={2}
+            max={40}
+            value={dseAgents}
+            onChange={(e) => setDseAgents(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>2 DSEs</span><span>40 DSEs</span></div>
+        </div>
+
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Monthly Inbound Car Inquiries:</span>
+            <span style={sliderValueStyle}>{monthlyInquiries} leads</span>
+          </div>
+          <input
+            type="range"
+            min={100}
+            max={2000}
+            step={50}
+            value={monthlyInquiries}
+            onChange={(e) => setMonthlyInquiries(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>100 leads</span><span>2,000 leads</span></div>
+        </div>
+
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Avg Dealer Margin per Car:</span>
+            <span style={sliderValueStyle}>₹{fmt(avgMargin)}</span>
+          </div>
+          <input
+            type="range"
+            min={15000}
+            max={150000}
+            step={5000}
+            value={avgMargin}
+            onChange={(e) => setAvgMargin(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>₹15,000</span><span>₹1,50,000</span></div>
+        </div>
+      </div>
+
+      <div style={metricsGridStyle}>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>EXTRA BUYERS CONNECTED</div>
+          <div style={{ ...metricValStyle, color: '#38bdf8' }}>+{fmt(extraConnects)} / mo</div>
+          <div style={metricDescStyle}>92% SIM pickup vs 28% spam 080 pickup</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>ADDITIONAL TEST DRIVES</div>
+          <div style={{ ...metricValStyle, color: '#22c55e' }}>+{extraTestDrives} drives</div>
+          <div style={metricDescStyle}>Confirmed via WhatsApp map pins</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>ADDITIONAL CAR BOOKINGS</div>
+          <div style={{ ...metricValStyle, color: '#f59e0b' }}>+{extraCarSales} cars</div>
+          <div style={metricDescStyle}>At 22% test-drive-to-booking ratio</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>AI CLOSER SOFTWARE COST</div>
+          <div style={{ ...metricValStyle, color: '#f8fafc' }}>₹{fmt(aiCloserCost)} / mo</div>
+          <div style={metricDescStyle}>Flat ₹399/user/month (zero pulse bills)</div>
+        </div>
+      </div>
+
+      <div style={highlightBannerStyle}>
+        <div>
+          <div style={{ fontSize: '13px', fontWeight: 700, color: '#22c55e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>
+            PROJECTED NET MONTHLY DEALERSHIP REVENUE
+          </div>
+          <div style={{ fontSize: '32px', fontWeight: 900, color: '#ffffff' }}>
+            +₹{fmt(netGain)} <span style={{ fontSize: '16px', color: '#94a3b8', fontWeight: 600 }}>/ month</span>
+          </div>
+          <div style={{ fontSize: '13px', color: '#cbd5e1', marginTop: '4px' }}>
+            Net ROI: <strong>{roiMultiplier}x return</strong> on AI Closer investment
+          </div>
+        </div>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={ctaButtonStyle}>
+          Boost Showroom Walk-Ins on WhatsApp →
+        </a>
+      </div>
+    </div>
+  );
+}
+
+// -------------------------------------------------------------
+// 6. Healthcare & Clinic Vertical Calculator
+// -------------------------------------------------------------
+function HealthcareClinicRoiCalculator() {
+  const [clinicStaff, setClinicStaff] = useState(4);
+  const [monthlyInquiries, setMonthlyInquiries] = useState(500);
+  const [avgConsultFee, setAvgConsultFee] = useState(1200);
+
+  const connectedVoip = Math.round(monthlyInquiries * 0.28);
+  const connectedSim = Math.round(monthlyInquiries * 0.90);
+  const extraConnects = connectedSim - connectedVoip;
+  const noShowsSaved = Math.max(1, Math.round(monthlyInquiries * 0.25));
+  const recoveredRevenue = noShowsSaved * avgConsultFee;
+  const telephonySavings = clinicStaff * 1500;
+  const aiCloserCost = clinicStaff * 399;
+  const netGain = recoveredRevenue + telephonySavings;
+  const roiMultiplier = Math.round(netGain / Math.max(1, aiCloserCost));
+
+  const fmt = (n: number) => n.toLocaleString('en-IN');
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    `Hello AI Closer, our clinic has ${clinicStaff} staff members handling ${monthlyInquiries} patient inquiries. Show us how to eliminate ${noShowsSaved} no-shows!`
+  )}`;
+
+  return (
+    <div style={calcContainerStyle}>
+      <span style={calcBadgeStyle}>CLINIC & OPD RETENTION ESTIMATOR</span>
+      <h3 style={calcHeadingStyle}>Calculate No-Show Reduction & Recovered OPD Revenue</h3>
+      <p style={calcSubtitleStyle}>
+        Automate patient confirmations, eliminate missed appointment slots, and ensure high pickup rates from verified clinic mobile SIM cards.
+      </p>
+
+      <div style={slidersGridStyle}>
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Calling Staff / Receptionists:</span>
+            <span style={sliderValueStyle}>{clinicStaff} staff</span>
+          </div>
+          <input
+            type="range"
+            min={1}
+            max={20}
+            value={clinicStaff}
+            onChange={(e) => setClinicStaff(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>1 staff</span><span>20 staff</span></div>
+        </div>
+
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Monthly Patient Appointment Inquiries:</span>
+            <span style={sliderValueStyle}>{monthlyInquiries} patients</span>
+          </div>
+          <input
+            type="range"
+            min={100}
+            max={2000}
+            step={50}
+            value={monthlyInquiries}
+            onChange={(e) => setMonthlyInquiries(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>100 patients</span><span>2,000 patients</span></div>
+        </div>
+
+        <div style={sliderCardStyle}>
+          <div style={sliderHeaderStyle}>
+            <span style={sliderLabelStyle}>Avg Consultation & Test Fee:</span>
+            <span style={sliderValueStyle}>₹{fmt(avgConsultFee)}</span>
+          </div>
+          <input
+            type="range"
+            min={500}
+            max={10000}
+            step={250}
+            value={avgConsultFee}
+            onChange={(e) => setAvgConsultFee(parseInt(e.target.value, 10))}
+            style={sliderInputStyle}
+          />
+          <div style={sliderRangeInfoStyle}><span>₹500</span><span>₹10,000</span></div>
+        </div>
+      </div>
+
+      <div style={metricsGridStyle}>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>ADDITIONAL PATIENTS REACHED</div>
+          <div style={{ ...metricValStyle, color: '#38bdf8' }}>+{fmt(extraConnects)} / mo</div>
+          <div style={metricDescStyle}>90% SIM pickup vs 28% spam 080 pickup</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>NO-SHOWS PREVENTED</div>
+          <div style={{ ...metricValStyle, color: '#22c55e' }}>+{noShowsSaved} visits</div>
+          <div style={metricDescStyle}>Via automated WhatsApp calendar reminders</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>RECOVERED OPD REVENUE</div>
+          <div style={{ ...metricValStyle, color: '#f59e0b' }}>+₹{fmt(recoveredRevenue)}</div>
+          <div style={metricDescStyle}>Retained clinic & diagnostic billings</div>
+        </div>
+        <div style={metricCardStyle}>
+          <div style={metricLabelStyle}>AI CLOSER SOFTWARE COST</div>
+          <div style={{ ...metricValStyle, color: '#f8fafc' }}>₹{fmt(aiCloserCost)} / mo</div>
+          <div style={metricDescStyle}>Flat ₹399/user/month (zero pulse bills)</div>
+        </div>
+      </div>
+
+      <div style={highlightBannerStyle}>
+        <div>
+          <div style={{ fontSize: '13px', fontWeight: 700, color: '#22c55e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>
+            PROJECTED NET CLINIC REVENUE RECOVERY
+          </div>
+          <div style={{ fontSize: '32px', fontWeight: 900, color: '#ffffff' }}>
+            +₹{fmt(netGain)} <span style={{ fontSize: '16px', color: '#94a3b8', fontWeight: 600 }}>/ month</span>
+          </div>
+          <div style={{ fontSize: '13px', color: '#cbd5e1', marginTop: '4px' }}>
+            Net ROI: <strong>{roiMultiplier}x return</strong> on AI Closer investment
+          </div>
+        </div>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={ctaButtonStyle}>
+          Eliminate Patient No-Shows on WhatsApp →
+        </a>
+      </div>
+    </div>
+  );
+}

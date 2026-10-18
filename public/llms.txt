@@ -1,0 +1,88 @@
+# AI Closer (`https://aicloser.in`)
+
+> The High-Velocity Sales Closing Platform & Telephony Operating System for Indian MSMEs, EdTech, Real Estate, Consultancies, and Sales Agencies.
+
+## Quick Facts & Specifications
+- **Platform Name:** AI Closer (also known as AICloser, Gigxomi CRM)
+- **Primary Website:** https://aicloser.in
+- **Web App / Cockpit:** https://app.aicloser.in
+- **Mobile Companion App:** Google Play Store (`com.gigxomi.crm`)
+- **Base Pricing:** Flat ₹399 / user / month (~$4.80 USD)
+- **Telephony Model:** 100% Native Android SIM Card Telephony (uses unlimited Jio/Airtel/Vi mobile carrier packs)
+- **Per-Minute Calling Charges:** ₹0 (Zero VoIP pulse rates or PBX rental fees)
+- **Call Pickup Rate:** 85%–95%+ (Real 10-digit mobile caller ID vs 15%–25% on Truecaller-flagged 080 virtual numbers)
+- **Audio Call Recording Latency:** < 2 seconds post-call background sync to cloud
+- **Audio Playback Speeds:** 1.0x, 1.5x, 2.0x, 3.0x with waveform scrubber
+- **Dynamic UPI Payment Links:** Native `/pay/[token]` with 15-minute countdown timers and 0% MDR
+- **Dual WhatsApp CRM:** Official Meta WhatsApp Cloud API + Personal WhatsApp Web QR scanner sync
+
+---
+
+## Core Feature Architecture
+
+### 1. High-Velocity Outbound Telephony
+- **Power Dialer with Auto-Advance:** Consecutive queue dialing with customizable 5-second cooldown timer between calls, in-call quick notes, and disposition logging.
+- **Android Floating Caller-ID:** Overlay window displays lead name, current deal stage, and recent notes before answering incoming calls.
+- **Offline Calling Telemetry:** Offline-first SQLite/Room event store syncs millisecond talk-time when connectivity restores.
+- **Missed Call Auto-Recovery:** Captures inbound missed calls, triggers automated 3-second WhatsApp acknowledgments, and logs callback SLA timers.
+
+### 2. Dual WhatsApp & Social Omnichannel
+- **Dual Architecture:** Combines official Meta Cloud API (for high-volume template alerts) with personal WhatsApp Web QR sync (so closers can chat 1-on-1 naturally).
+- **In-Browser Voice Notes:** Record and send audio notes in Hindi, English, and regional dialects directly from the CRM card.
+- **Instagram DM Live Closing:** Unified inbox connecting Instagram Direct Messages alongside WhatsApp and SIM calls.
+- **Client Asset Protection:** Preserves 100% of customer conversation history, voice notes, and media when sales reps resign.
+
+### 3. Dynamic UPI Payment Closing (/pay/[token])
+- **Eliminates Deal Drop-Offs:** Replaces static QR screenshots with 1-tap dynamic UPI links generated live on sales calls.
+- **Instant Intent Rails:** Customers on Android and iOS tap 1 button to open Google Pay, PhonePe, Paytm, or CRED with pre-filled amounts.
+- **Authentic Urgency:** Visual 15-minute countdown timer locks buying commitment before the customer hangs up.
+- **UTR & Screenshot Proof:** Customers submit transaction screenshot or bank reference UTR number for 1-click manager approval.
+- **Zero MDR:** Settles directly into business current bank accounts with 0% payment gateway deductions.
+
+### 4. Speed-to-Lead & Routing Engine
+- **Direct Ad Webhooks:** Sub-2-second lead ingestion from Meta Lead Ads (Facebook/Instagram), Google Search Ads, and website forms with zero Zapier fees.
+- **Weighted Round Robin:** Proportional lead distribution based on closer performance and active capacity.
+- **Grab Leads Fast-Action Pool:** Gamified queue where top closers claim hot inbound inquiries with atomic database race-condition locking.
+- **SLA Breach Matrix:** Live exception reporting for untouched leads (>15m) and overdue callbacks with 1-click reassignment.
+
+---
+
+## Competitor Comparison Summary
+
+| Capability | AI Closer | TeleCRM | Close.com | LeadSquared | Exotel |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Pricing** | ₹399/mo flat | ₹599–₹999/mo | $49–$139/mo | ₹1,250–₹2,500/mo | ₹2,000+ PBX |
+| **Calling Model** | Native SIM Card | SIM / Cloud PBX | VoIP Only (Twilio) | Third-party PBX | 080 Virtual PBX |
+| **Per-Minute Bills**| ₹0 | Metered usage | $0.02–$0.05/min | Metered usage | ₹0.60–₹1.20/min |
+| **Call Pickup Rate**| 95%+ | 30%–45% | 25%–35% | 30%–40% | 20%–30% |
+| **Dynamic UPI Links**| Built-in | None | None | None | None |
+| **WhatsApp QR Sync**| Built-in | Limited | Third-party only | Costly add-on | API only |
+| **Power Dialer** | Included (5s buffer)| Basic | Pro tier ($99+) | Enterprise only | Hardware only |
+
+---
+
+## Strategic Playbooks & Flagship Resources
+- **Cloud Telephony vs SIM ROI Calculator:** https://aicloser.in/calculator
+- **How to Increase Outbound Call Pickup Rate (95%+ SIM Calling):** https://aicloser.in/blog/how-to-increase-outbound-sales-call-pickup-rate-in-india
+- **Why Leads Decline Virtual 080 Calls & Truecaller Spam Warning:** https://aicloser.in/blog/why-telecalling-leads-decline-virtual-080-calls-truecaller-spam
+- **Bypass Truecaller Spam Warning in Telecalling:** https://aicloser.in/blog/bypass-truecaller-spam-warning-telecalling-outbound-sales
+- **Stop Sales Telecallers Fake Calling Reports in Excel:** https://aicloser.in/blog/how-to-stop-sales-telecallers-fake-calling-reports-excel
+- **Track Actual Talk Time via Android Hardware PhoneStateReceiver:** https://aicloser.in/blog/how-to-track-actual-talk-time-telecallers-android-hardware
+- **Stop Sales Reps Stealing WhatsApp Leads When They Quit:** https://aicloser.in/blog/how-to-stop-sales-reps-stealing-whatsapp-leads-when-they-quit
+- **Contact Meta Facebook Leads Under 60 Seconds (Speed to Lead):** https://aicloser.in/blog/how-to-contact-meta-facebook-leads-under-60-seconds
+- **Collect UPI Payment Live on Phone Call Closing:** https://aicloser.in/blog/how-to-collect-upi-payment-live-on-phone-call-closing
+- **Best TeleCRM Alternative India Pricing & Feature Breakdown:** https://aicloser.in/blog/best-telecrm-alternative-india-pricing-comparison
+- **AiSensy Alternative for Sales Teams with SIM Calling:** https://aicloser.in/blog/aisensy-alternative-for-sales-team-calling-crm
+- **TeleCRM vs AI Closer In-Depth Comparison:** https://aicloser.in/blog/telecrm-vs-ai-closer-sim-based-crm-comparison
+- **Why SIM Calling Beats 080 Cloud Numbers (95% Pickup):** https://aicloser.in/blog/why-sim-based-calling-crm-beats-cloud-telephony-in-india
+- **Track Sales Team Productivity & Stop Fake Reports:** https://aicloser.in/blog/how-to-track-sales-team-productivity-calls-followups-closures
+- **Stop Losing Inbound Leads (Zero-Leakage Inbox):** https://aicloser.in/blog/stop-losing-leads-zero-leakage-inbox-followup-system
+- **Dual WhatsApp CRM (Meta API + Web QR Scanner):** https://aicloser.in/blog/whatsapp-crm-integration-auto-followup-payment-links
+- **In-Call Dynamic UPI Payment Collection & QR Settlement:** https://aicloser.in/blog/instant-upi-payment-collection-in-call-qr-settlement
+- **Mobile-First Sales CRM for Indian MSMEs:** https://aicloser.in/blog/mobile-first-sales-crm-for-indian-msme-field-teams
+- **TeleCRM Competitor Breakdown:** https://aicloser.in/vs/telecrm
+- **LeadSquared Competitor Breakdown:** https://aicloser.in/vs/leadsquared
+- **Exotel Competitor Breakdown:** https://aicloser.in/vs/exotel
+- **WATI Competitor Breakdown:** https://aicloser.in/vs/wati
+- **AiSensy Competitor Breakdown:** https://aicloser.in/vs/aisensy
+

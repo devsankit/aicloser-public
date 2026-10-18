@@ -405,7 +405,7 @@ export const roles: RoleDefinition[] = [
       { question: 'Can we collect token amounts on live calls?', answer: 'Yes! AI Closer generates a Dynamic UPI QR code with a 15-minute timer that buyers can scan with PhonePe/GooglePay to lock site visit tokens.' },
     ],
     relatedGuides: [
-      { title: 'Real Estate Telecalling CRM India (2026 Strategy Guide)', slug: 'real-estate-telecalling-crm-india' },
+      { title: 'Sell.Do vs LeadSquared vs TeleCRM vs AI Closer: Real Estate CRM Comparison (2026)', slug: 'real-estate-crm-india-selldo-telecrm-leadsquared-comparison-guide-2026' },
       { title: 'Why Telecalling Leads Decline: Virtual 080 Calls vs SIM Calling', slug: 'why-telecalling-leads-decline-virtual-080-calls-truecaller-spam-roi-blueprint-8274' },
       { title: 'Stop Losing Leads: Zero Leakage Telecalling System', slug: 'stop-losing-leads-zero-leakage-inbox-followup-system' },
     ],
@@ -687,6 +687,193 @@ export const roles: RoleDefinition[] = [
       { title: 'POSP Agent Call Recording and Lead CRM Guide', slug: 'posp-agent-call-recording-and-lead-crm-execution-framework-6604' },
       { title: 'Credit Card & Insurance Telesales CRM with SIM Support', slug: 'credit-card-telesales-crm-with-sim-support' },
       { title: 'How to Prevent Telecalling SIM Cards from Getting Blocked', slug: 'how-to-prevent-telecalling-sim-blocked-airtel-jio-trai-2026' },
+    ],
+  },
+
+  {
+    slug: 'automobile-dealership-crm',
+    roleName: 'Automobile Dealership CRM',
+    eyebrow: 'BUILT FOR SHOWROOMS & WORKSHOPS',
+    tagline: 'Car & Two-Wheeler Dealership Telecalling CRM with 94% Pickup Rate & Test Drive Tracking',
+    seoTitle: 'Automobile Dealership CRM (2026 Guide)',
+    seoDescription: 'Boost test drive bookings & service retention: 94% call pickup rate with SIM cards, instant WhatsApp brochures, and call recording at flat ₹399/user/month.',
+    heroBadge: 'TEST DRIVE BOOKING SPEED · SERVICE RETENTION',
+    heroHeadline: 'Turn Car & Bike Inquiries into Showroom Walk-Ins.',
+    heroSubheadline: 'Car buyers never pick up spam-flagged 080 numbers. AI Closer equips dealership DSEs and service reminder callers with mobile SIM dialing, instant WhatsApp brochure sharing, and automated test drive tracking at flat ₹399/mo.',
+    painPoints: [
+      {
+        title: 'Car Buyers Ignore Virtual 080 Numbers on Truecaller',
+        description: 'Buyers researching cars online get bombarded with calls. When dealerships call from virtual cloud IVRs, Truecaller flags them as spam, driving pickup rates below 30%.',
+      },
+      {
+        title: 'Test Drive Drop-Offs & Slow Speed-to-Lead',
+        description: 'Meta Car Lead Forms decay within 15 minutes. Dealership executives call after 4 hours, losing high-intent buyers to rival showrooms down the street.',
+      },
+      {
+        title: 'Service Due Reminders Lost in Spreadsheets',
+        description: 'Dealership service departments lose 45% of recurring vehicle servicing revenue because telecallers miss 6-month Periodic Maintenance Service (PMS) cadences.',
+      },
+    ],
+    corePillars: [
+      {
+        title: 'Authentic 10-Digit Mobile SIM Calling',
+        description: 'DSEs dial directly from standard Airtel/Jio SIMs inside company Android phones, eliminating spam flags and delivering 85%+ pickup rates.',
+        badge: '85%+ PICKUP RATE',
+        bullets: [
+          'Direct connection from clean 10-digit mobile caller IDs',
+          'Automatic two-way call recording without external announcements',
+          'Zero per-minute call pulse bills for high-volume showroom teams',
+        ],
+        image: 'https://aicloser.in/assets/reference/hero-dashboard.png',
+      },
+      {
+        title: '1-Tap Vehicle Brochure & Quotation on WhatsApp',
+        description: 'Send variant brochures, on-road price breakdowns, and EMI calculator links instantly on WhatsApp while the customer is on the phone.',
+        badge: 'INSTANT BROCHURE DISPATCH',
+        bullets: [
+          'Pre-formatted variant spec sheets and on-road price estimates',
+          'Sync personal WhatsApp Web chats directly with customer CRM record',
+          'Track when customers open and review the pricing breakdown',
+        ],
+        image: 'https://aicloser.in/assets/reference/leads-view.png',
+      },
+      {
+        title: 'Automated Test Drive Scheduling & Showroom Pins',
+        description: 'Track test drive commitments with calendar alerts and Google Maps showroom location pins sent automatically via WhatsApp.',
+        badge: 'ZERO WALK-IN NO-SHOWS',
+        bullets: [
+          'Dedicated Test Drive Pipeline stage with date/time scheduling',
+          'Automated WhatsApp reminder 2 hours before the scheduled appointment',
+          'Instant Google Maps navigation link sent to buyer smartphone',
+        ],
+        image: 'https://aicloser.in/assets/reference/pipeline-view.png',
+      },
+      {
+        title: 'Periodic Maintenance Service (PMS) Booking Engine',
+        description: 'Never lose vehicle servicing revenue. Automated 6-month and 1-year service reminders with 1-click power dialing.',
+        badge: 'RECURRING SERVICE REVENUE',
+        bullets: [
+          'Automated 180-day service expiry queue for workshop telecallers',
+          'Pre-filled service discount vouchers sent via WhatsApp',
+          'Live telecaller activity tracking for workshop receptionists',
+        ],
+        image: 'https://aicloser.in/assets/reference/hero-dashboard.png',
+      },
+    ],
+    workflowSteps: [
+      { title: 'Inquiry Intake', description: 'Instant lead capture from Meta ads, CarWale, CarDekho, or showroom walk-ins.' },
+      { title: 'Sub-60s SIM Call', description: 'Connect with high-intent car buyer at 90%+ pickup rate using native mobile SIM.' },
+      { title: '1-Tap WhatsApp Spec Sheet', description: 'Send on-road price breakdown, finance options, and showroom map pin.' },
+      { title: 'Confirm Test Drive / Service Slot', description: 'Lock appointment in CRM with automated WhatsApp confirmation and reminders.' },
+    ],
+    comparisonRows: [
+      { featureName: 'Call Connect Rate', traditionalWay: '25%–32% on Cloud IVR (Spam Flagged)', aiCloserWay: '85%–94% on Authentic 10-Digit Mobile SIMs' },
+      { featureName: 'Quotation Speed', traditionalWay: '30-minute email delay; buyer visits rival', aiCloserWay: '1-Tap Instant WhatsApp EMI & Price Chart' },
+      { featureName: 'Service Renewal Tracking', traditionalWay: 'Lost in Excel sheets; 45% customers lapse', aiCloserWay: 'Automated PMS Service Queue with WhatsApp Nudges' },
+      { featureName: 'Cost per DSE / Agent', traditionalWay: '₹2,500/seat on heavy auto enterprise CRMs', aiCloserWay: 'Flat ₹399/user/month with zero setup fees' },
+    ],
+    faqs: [
+      { question: 'How does AI Closer help car dealerships increase test drive conversions?', answer: 'By dialing leads within 60 seconds from clean mobile SIMs, dealership executives connect before the buyer forgets the inquiry, locking test drives 3x faster than delayed calls.' },
+      { question: 'Can dealership general managers listen to executive customer pitches?', answer: 'Yes! Complete call audio is automatically synced to the web admin dashboard with talk-time analytics, daily dials, and playback on desktop and mobile.' },
+      { question: 'Does AI Closer support workshop service outbound calling?', answer: 'Yes! Workshop telecallers can load monthly Periodic Maintenance Service (PMS) customer lists and dial with 1-click power dialing and WhatsApp service vouchers.' },
+    ],
+    relatedGuides: [
+      { title: 'Commercial Telesales Tracking App Implementation Guide', slug: 'commercial-solar-telesales-tracking-app-implementation-guide-3377' },
+      { title: 'Best Telecalling Apps for Android Smartphones in India', slug: 'best-telecalling-apps-for-android-smartphones-india-complete-playbook-8489' },
+      { title: 'How to Fix Truecaller Spam Tagging on Sales Calls', slug: 'how-to-fix-truecaller-spam-tagging-sales-calls-execution-framework-5433' },
+    ],
+  },
+  {
+    slug: 'healthcare-clinic-crm',
+    roleName: 'Healthcare & Clinic Calling CRM',
+    eyebrow: 'BUILT FOR HOSPITALS, CLINICS & LABS',
+    tagline: 'Patient Appointment & Tele-Consultation Calling CRM with Zero Spam Flagging',
+    seoTitle: 'Healthcare Telecalling CRM (2026 Guide)',
+    seoDescription: 'Cut patient no-shows by 60%: High-pickup SIM calling, automated WhatsApp appointment reminders, and digital consultation booking at flat ₹399/user/month.',
+    heroBadge: 'PATIENT RETENTION · ZERO NO-SHOW APPOINTMENTS',
+    heroHeadline: 'Fill Clinic Calendars & Eliminate Patient No-Shows.',
+    heroSubheadline: 'Patients ignore spam-tagged corporate 080 landlines. AI Closer enables clinic receptionists, hospital counselors, and diagnostic coordinators to call from trusted mobile SIMs with automated WhatsApp reminders at flat ₹399/mo.',
+    painPoints: [
+      {
+        title: 'Patients Reject Spam-Flagged Hospital Landlines',
+        description: 'Patients awaiting consultation slots or lab reports ignore cold calls from virtual call center lines, leading to missed appointments and delayed care.',
+      },
+      {
+        title: '35%–45% No-Show Rates for OPD Consultations & Procedures',
+        description: 'Patients forget booked OPD appointments without timely WhatsApp confirmations and doctor location instructions.',
+      },
+      {
+        title: 'Fragmented Patient History Across Registers',
+        description: 'Receptionists scramble to find previous consultation notes and prescribed diagnostic packages during follow-up calls.',
+      },
+    ],
+    corePillars: [
+      {
+        title: 'Trusted Mobile SIM Calling for Patient Care',
+        description: 'Dials from clean, verified SIM cards that look like personal clinic numbers, lifting call-to-connect rates to 92%+.',
+        badge: '92% PATIENT CONNECTION',
+        bullets: [
+          'High connection rate on standard 10-digit mobile SIM cards',
+          'Two-way audio recording with encrypted cloud storage',
+          'Protects clinic staff against miscommunication disputes',
+        ],
+        image: 'https://aicloser.in/assets/reference/hero-dashboard.png',
+      },
+      {
+        title: 'Automated WhatsApp Appointment Confirmations',
+        description: 'Dispatches instant appointment time, doctor details, preparation checklist, and clinic Google Maps location.',
+        badge: 'ZERO NO-SHOW APPOINTMENTS',
+        bullets: [
+          'Instant WhatsApp appointment slip with doctor name and time',
+          'Fasting & test preparation instructions sent automatically',
+          'Automated reminder message 2 hours prior to consultation',
+        ],
+        image: 'https://aicloser.in/assets/reference/leads-view.png',
+      },
+      {
+        title: 'Diagnostic Report & Follow-Up Tracking Queue',
+        description: 'Maintains daily follow-up queues for post-procedure checkups, routine health checkups, and chronic care re-visits.',
+        badge: 'PATIENT CARE RETENTION',
+        bullets: [
+          'Scheduled follow-up queue for post-surgery and routine checkups',
+          '1-Click WhatsApp report delivery to patient mobile',
+          'Centralized patient call history and communication timeline',
+        ],
+        image: 'https://aicloser.in/assets/reference/pipeline-view.png',
+      },
+      {
+        title: 'In-Call Dynamic UPI Consultation Advance Collection',
+        description: 'Lock consultation slots and surgery token advances on the call via secure Dynamic UPI QR codes.',
+        badge: 'INSTANT CONSULTATION PAYMENT',
+        bullets: [
+          '15-Minute live dynamic UPI QR code on caller screen',
+          'Real-time payment confirmation for advance OPD bookings',
+          'Immediate digital receipt delivery on WhatsApp',
+        ],
+        image: 'https://aicloser.in/assets/reference/hero-dashboard.png',
+      },
+    ],
+    workflowSteps: [
+      { title: 'Inquiry & Lead Intake', description: 'Receive patient inquiries from website, Google Business Profile, or Practo.' },
+      { title: 'SIM Call Connection', description: 'Receptionist connects at 92%+ pickup rate to understand medical requirements.' },
+      { title: 'Send WhatsApp Slip & Prep Guide', description: 'Dispatch doctor slot, clinic Google Maps location, and test instructions.' },
+      { title: 'Automated Reminder & OPD Visit', description: 'Automated T-24h and T-2h WhatsApp notifications prevent missed appointments.' },
+    ],
+    comparisonRows: [
+      { featureName: 'Patient Pickup Rate', traditionalWay: '28% on Spam Virtual 080 Numbers', aiCloserWay: '90%+ on Authentic Clinic Mobile SIMs' },
+      { featureName: 'Appointment No-Shows', traditionalWay: '35%–45% without reminders', aiCloserWay: 'Under 10% with Automated WhatsApp Reminders' },
+      { featureName: 'Consultation Advance', traditionalWay: 'Manual bank transfers & lost bookings', aiCloserWay: 'In-Call 1-Tap Dynamic UPI QR Code' },
+      { featureName: 'Software Cost', traditionalWay: '₹3,000–₹5,000/seat on hospital HMS modules', aiCloserWay: 'Flat ₹399/user/month (zero setup fee)' },
+    ],
+    faqs: [
+      { question: 'How does AI Closer prevent patient appointment no-shows?', answer: 'By sending automated WhatsApp confirmation tickets with location pins immediately after the call and automated reminder alerts 2 hours prior to the appointment.' },
+      { question: 'Is patient call recording safe and confidential?', answer: 'Yes! All call recordings are stored with encrypted cloud access restricted exclusively to clinic administrators and medical directors.' },
+      { question: 'Can diagnostic centers use AI Closer for home sample collection bookings?', answer: 'Yes! Diagnostic lab booking agents can verify patient addresses and confirm phlebotomist collection slots with 1-click power dialing.' },
+    ],
+    relatedGuides: [
+      { title: 'Customer Privacy Notices in Automated WhatsApp Lead Acknowledgments', slug: 'customer-privacy-notices-in-automated-whatsapp-lead-acknowledgmen' },
+      { title: 'Preventing Call Recording Tampering with Cryptographic Verification', slug: 'preventing-call-recording-tampering-cryptographic-hash-verificati' },
+      { title: 'TeleCRM vs Runo vs AI Closer Comparison (2026)', slug: 'telecrm-vs-runo-vs-ai-closer-sim-crm-comparison-2026' },
     ],
   },
 

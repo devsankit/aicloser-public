@@ -679,6 +679,62 @@ body .faq-cta h3,body .testimonial-row blockquote footer{font-family:'Google San
 .article-body{max-width:700px;margin:70px 0 38px;border-top:1px solid var(--line);padding-top:38px}
 .article-body p{margin:0 0 26px;color:#4d4e4a;font-size:17px;line-height:1.75}
 
+/* Blog Article FAQ Container & Smooth Accordion */
+.article-body .faq-container {
+  margin: 32px 0 44px 0 !important;
+}
+.article-body .faq-container details {
+  background: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 18px 22px !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.25s ease !important;
+}
+.article-body .faq-container details[open] {
+  border-color: #ea580c !important;
+  background: #131b2e !important;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.12) !important;
+}
+.article-body .faq-container summary {
+  font-family: 'Google Sans Flex', 'Google Sans', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  outline: none !important;
+  list-style: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  line-height: 1.45 !important;
+}
+.article-body .faq-container summary::-webkit-details-marker {
+  display: none !important;
+}
+.article-body .faq-container summary::after {
+  content: '＋';
+  font-size: 18px;
+  font-weight: 700;
+  color: #f97316;
+  margin-left: 14px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.article-body .faq-container details[open] summary::after {
+  content: '－';
+  color: #ea580c;
+}
+.article-body .faq-container details p {
+  color: #cbd5e1 !important;
+  font-size: 15px !important;
+  line-height: 1.68 !important;
+  margin: 14px 0 0 0 !important;
+  padding-top: 12px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
 /* Pipeline showcase: the visual owns the first grid column and the copy owns
    the second. This prevents the reference image from dropping to a blank row. */
 .split-section > .pipeline-visual{
@@ -905,5 +961,55 @@ body .faq-cta h3,body .testimonial-row blockquote footer{font-family:'Google San
 @media (max-width: 620px) {
   .site-footer {
     padding-bottom: 20px !important;
+  }
+}
+
+/* SEO Directory & Competitor Silo Links */
+.footer-directory {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 36px;
+  margin-bottom: 24px;
+  padding: 32px 36px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-sizing: border-box;
+}
+.directory-column h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+.directory-column a {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 9px;
+  transition: color 0.15s ease;
+}
+.directory-column a:hover {
+  color: var(--orange);
+}
+@media (max-width: 900px) {
+  .footer-directory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding: 28px 24px;
+  }
+}
+@media (max-width: 620px) {
+  .footer-directory {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 18px;
+    margin-top: 24px;
   }
 }

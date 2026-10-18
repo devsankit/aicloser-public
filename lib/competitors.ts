@@ -542,7 +542,7 @@ export const competitors: CompetitorDefinition[] = [
     name: 'MIS Work',
     tagline: 'Why High-Velocity Sales Teams Choose AI Closer Over MIS Work',
     seoTitle: 'MIS Work Alternative & SIM CRM Comparison (2026)',
-    seoDescription: 'Compare MIS Work vs AI Closer. Discover why growing Indian sales teams choose AI Closer for 100% automated SIM call recording, dual WhatsApp sync, and transparent flat ₹399/mo pricing instead of complex Google Sheets consulting.',
+    seoDescription: 'Compare MIS Work vs AI Closer. Discover automated SIM call recording, dual WhatsApp sync, and flat ₹399/mo pricing vs complex Google Sheets setup.',
     competitorPrice: 'Custom Consulting Quotes (₹10,000–₹35,000+ Setup)',
     aiCloserPrice: '₹399/seat/mo (Flat, All-Inclusive)',
     pickupRate: { aiCloser: '95%+ (Native Mobile SIMs)', competitor: '90%+ (Normal Dialers; Google Dialer sync issues)' },
@@ -591,6 +591,165 @@ export const competitors: CompetitorDefinition[] = [
       }
     ],
     relatedBlogSlug: 'mis-work-vs-ai-closer-sim-based-call-recording-crm-comparison-2026'
+  },
+  {
+    slug: 'lystloc',
+    name: 'Lystloc',
+    tagline: 'Why Outbound Sales Teams Upgrade from Lystloc to AI Closer',
+    seoTitle: 'Lystloc Alternative & SIM CRM Comparison (2026)',
+    seoDescription: 'Compare Lystloc vs AI Closer. Discover full-featured SIM CRM with automatic call recording, dual WhatsApp sync, and flat ₹399/mo pricing vs GPS tracking only.',
+    competitorPrice: '₹199 – ₹499 / user / mo (GPS Tracking Only)',
+    aiCloserPrice: '₹399 / seat / mo (Flat, All-Inclusive)',
+    pickupRate: { aiCloser: '95%+ (Native Mobile SIMs)', competitor: 'Standard Dialing (No SIM Intelligence)' },
+    telephonyType: { aiCloser: 'Proprietary Native Android SIM Recording', competitor: 'Manual Phone Logs / GPS Field Tracking' },
+    comparisonRows: [
+      { featureName: 'Monthly Subscription Cost', aiCloserValue: '₹399 / user / month (Flat)', competitorValue: '₹199–₹499 (GPS Only, Telesales features missing)', aiCloserWins: true },
+      { featureName: 'Call Recording Automation', aiCloserValue: '100% Automatic background hardware recording', competitorValue: 'No automated call recording (Field tracking only)', aiCloserWins: true },
+      { featureName: 'WhatsApp Integration', aiCloserValue: 'Dual Engine: Meta Cloud API + Personal Web QR sync', competitorValue: 'Basic external share link', aiCloserWins: true },
+      { featureName: 'In-Call Dynamic UPI Payment Collection', aiCloserValue: 'Dynamic in-call QR generation & instant settlement', competitorValue: 'Not supported', aiCloserWins: true },
+      { featureName: 'Visual Sales Pipeline & Kanban', aiCloserValue: 'Drag-and-drop deal stages & pipeline analytics', competitorValue: 'Field attendance lists & location timelines', aiCloserWins: true },
+      { featureName: 'Setup & Implementation Time', aiCloserValue: '3 minutes self-serve setup', competitorValue: 'Field app rollout & admin location configuration', aiCloserWins: true },
+    ],
+    whySwitchReasons: [
+      {
+        title: 'Built Specifically for Closing Sales, Not Just Tracking Employee GPS',
+        description: 'Lystloc is primarily designed for field workforce attendance and location tracking. AI Closer is an aggressive sales conversion machine equipped with auto-dialing, cloud call recordings, conversation coaching, and lead distribution.'
+      },
+      {
+        title: 'Automated Two-Way Call Recording with Zero Manual Effort',
+        description: 'Unlike Lystloc which only logs call activity durations, AI Closer records complete two-way customer audio directly to the cloud, allowing managers to audit sales pitches and coach representatives.'
+      },
+      {
+        title: 'Instant Dynamic UPI Payment Closing',
+        description: 'AI Closer allows reps to collect token payments and booking amounts live on the call using dynamic UPI QR links with 15-minute countdown timers, stopping post-call buyer drop-offs.'
+      }
+    ],
+    migrationSteps: [
+      { title: 'Step 1: Export Leads', description: 'Download your contact lists and customer phone numbers from Lystloc or Excel in CSV format.' },
+      { title: 'Step 2: 1-Click Import', description: 'Upload your leads to AI Closer with instant duplicate detection and automatic field mapping.' },
+      { title: 'Step 3: Download Android App & Start Closing', description: 'Telecallers download AI Closer and start dialing with automatic SIM call recording and WhatsApp sync immediately.' }
+    ],
+    faqs: [
+      {
+        question: 'How is AI Closer different from Lystloc?',
+        answer: 'Lystloc is primarily a field employee GPS location and attendance tracking tool. AI Closer is a specialized telecalling and sales closing CRM that features automated SIM call recording, dual WhatsApp sync, visual Kanban pipelines, and in-call dynamic UPI payment collection.'
+      },
+      {
+        question: 'Does Lystloc record customer phone calls?',
+        answer: 'No. Lystloc logs call history timestamps but does not provide automated cloud audio recording or voice playback. AI Closer automatically records all outbound and inbound SIM calls to the cloud dashboard.'
+      },
+      {
+        question: 'What is the pricing difference between AI Closer and Lystloc?',
+        answer: 'While Lystloc charges ₹199–₹499/user solely for location tracking, AI Closer provides a complete enterprise sales telecalling CRM with call recording, WhatsApp sync, and pipeline management at a flat rate of ₹399/user/month.'
+      }
+    ],
+    relatedBlogSlug: 'lystloc-vs-ai-closer-sim-based-crm-comparison-2026'
+  },
+  {
+    slug: 'privyr',
+    name: 'Privyr',
+    tagline: 'Why Indian Telecalling Teams Choose AI Closer Over Privyr',
+    seoTitle: 'Privyr Alternative & SIM CRM Comparison (2026)',
+    seoDescription: 'Compare Privyr vs AI Closer. Get automatic background SIM call recording, cloud audio playback, and flat ₹399/mo pricing vs manual message templates.',
+    competitorPrice: '₹799 – ₹1,499 / user / month',
+    aiCloserPrice: '₹399 / seat / mo (Flat, All Features)',
+    pickupRate: { aiCloser: '95%+ (Native Mobile SIMs)', competitor: '90%+ (Manual Mobile Calls)' },
+    telephonyType: { aiCloser: 'Proprietary Native Android SIM Recording', competitor: 'Manual Device Calling (No Call Recording)' },
+    comparisonRows: [
+      { featureName: 'Monthly Subscription Cost', aiCloserValue: '₹399 / user / month (Flat)', competitorValue: '₹799 to ₹1,499 / user / month', aiCloserWins: true },
+      { featureName: 'Call Recording Automation', aiCloserValue: '100% Automatic background hardware recording', competitorValue: 'Not supported (Privyr cannot record calls)', aiCloserWins: true },
+      { featureName: 'WhatsApp Integration', aiCloserValue: 'Dual Engine: Meta Cloud API + Personal Web QR sync', competitorValue: 'Personal WhatsApp click-to-chat templates only', aiCloserWins: true },
+      { featureName: 'In-Call Dynamic UPI Payment Collection', aiCloserValue: 'Dynamic in-call QR generation & instant settlement', competitorValue: 'Not supported', aiCloserWins: true },
+      { featureName: 'Centralized Manager Audio Audits', aiCloserValue: 'Cloud audio waveform scrubber & objection tagging', competitorValue: 'No audio audits available', aiCloserWins: true },
+      { featureName: 'Team Lead Distribution', aiCloserValue: 'Sub-60s round-robin & rule-based assignment', competitorValue: 'Basic manual lead sharing', aiCloserWins: true },
+    ],
+    whySwitchReasons: [
+      {
+        title: 'Full Automated Call Recording (Privyr Cannot Record Calls)',
+        description: 'Privyr is a lightweight mobile template tool that cannot record calls. AI Closer provides 100% automatic two-way Android call recording to the cloud, giving sales managers complete auditability over every pitch.'
+      },
+      {
+        title: 'Save Over 60% on Monthly Software Costs (₹399 vs ₹1,200/seat)',
+        description: 'Privyr charges ₹799 to ₹1,499 per user per month for basic contact management. AI Closer provides enterprise telecalling, SIM recording, and WhatsApp sync at a flat ₹399 per user per month.'
+      },
+      {
+        title: 'Dynamic In-Call UPI Payment Collection',
+        description: 'Privyr requires reps to send static payment links manually. AI Closer lets telecallers generate dynamic UPI payment QRs with real-time countdown timers directly on the call, verifying payments instantly.'
+      }
+    ],
+    migrationSteps: [
+      { title: 'Step 1: Export Privyr Contacts', description: 'Download your leads and customer notes from Privyr in CSV format.' },
+      { title: 'Step 2: Upload to AI Closer', description: 'Import your database into AI Closer with automated column matching in 60 seconds.' },
+      { title: 'Step 3: Start Dialing with Recording', description: 'Download AI Closer Android app to start closing deals with automatic call recording and dual WhatsApp sync.' }
+    ],
+    faqs: [
+      {
+        question: 'Does Privyr support call recording?',
+        answer: 'No. Privyr does not record phone calls. AI Closer provides proprietary native Android background call recording that automatically synchronizes two-way customer audio to the centralized web dashboard.'
+      },
+      {
+        question: 'Why do Indian real estate and sales teams switch from Privyr to AI Closer?',
+        answer: 'Sales teams switch to AI Closer because it offers complete background SIM call recording, dual WhatsApp integration (both personal QR sync and official Cloud API), dynamic in-call UPI payments, and half the monthly price (₹399/mo vs ₹1,200/mo).'
+      },
+      {
+        question: 'Can I connect multiple telecallers in AI Closer?',
+        answer: 'Yes. AI Closer includes centralized manager dashboards, team activity telemetry, automated lead assignment, and role-based permissions at flat ₹399/user/month.'
+      }
+    ],
+    relatedBlogSlug: 'privyr-vs-ai-closer-sim-based-crm-comparison-2026'
+  },
+  {
+    slug: 'zoho-crm',
+    name: 'Zoho CRM',
+    tagline: 'Why Agile Sales Teams Choose AI Closer Over Complex Zoho CRM',
+    seoTitle: 'Zoho CRM Telecalling Alternative in India (2026)',
+    seoDescription: 'Compare Zoho CRM vs AI Closer. Get native Android SIM calling, automated background call recording, and flat ₹399/mo pricing vs complex enterprise modules.',
+    competitorPrice: '₹1,500 – ₹3,500 / user / mo + Telephony Integration Fees',
+    aiCloserPrice: '₹399 / seat / mo (Flat, All-Inclusive)',
+    pickupRate: { aiCloser: '95%+ (Native Mobile SIMs)', competitor: '15%–25% (VoIP PhoneBridge / Virtual 080)' },
+    telephonyType: { aiCloser: 'Proprietary Native Android SIM Recording', competitor: 'Cloud PBX / Third-party Telephony Integrations' },
+    comparisonRows: [
+      { featureName: 'Monthly Subscription Cost', aiCloserValue: '₹399 / user / month (Flat)', competitorValue: '₹1,500 to ₹3,500 / user / month + add-on fees', aiCloserWins: true },
+      { featureName: 'Telephony Setup & Minute Rates', aiCloserValue: '₹0 setup, ₹0 per-minute call charges', competitorValue: 'Expensive Zoho PhoneBridge + VoIP pulse charges', aiCloserWins: true },
+      { featureName: 'Call Pickup Rate', aiCloserValue: '95%+ (Native 10-Digit Mobile SIMs)', competitorValue: '15%–25% (080 Virtual Numbers flagged as Spam)', aiCloserWins: true },
+      { featureName: 'Implementation & Training Time', aiCloserValue: '3 minutes self-serve setup', competitorValue: 'Weeks to months of enterprise CRM consulting', aiCloserWins: true },
+      { featureName: 'WhatsApp Integration', aiCloserValue: 'Dual Engine: Meta Cloud API + Personal Web QR sync', competitorValue: 'Enterprise marketplace plugins with complex pricing', aiCloserWins: true },
+      { featureName: 'Dynamic In-Call UPI Payment Collection', aiCloserValue: 'Dynamic in-call QR generation & instant settlement', competitorValue: 'Not supported without third-party ERP integrations', aiCloserWins: true },
+    ],
+    whySwitchReasons: [
+      {
+        title: 'Native SIM Calling with 95% Pickup Rates vs Spam-Flagged VoIP',
+        description: 'Zoho CRM requires third-party cloud telephony PBX integrations (like Exotel or Twilio) that dial from virtual 080 numbers flagged as spam by Truecaller. AI Closer dials from native mobile SIMs to deliver 95%+ answer rates.'
+      },
+      {
+        title: 'Cut Total CRM & Telephony Expenditure by 80%',
+        description: 'A 10-person sales team on Zoho CRM pays ₹15,000 to ₹35,000/mo plus metered telephony minutes. AI Closer provides unlimited SIM calling, call recording, and WhatsApp CRM for just ₹3,990/month total.'
+      },
+      {
+        title: 'Zero Enterprise Bloat: Designed for High-Velocity Closing',
+        description: 'Zoho CRM has hundreds of confusing menus and requires dedicated admins. AI Closer gives sales reps an agile Android power dialer, floating caller-ID, and instant dynamic UPI payment links.'
+      }
+    ],
+    migrationSteps: [
+      { title: 'Step 1: Export Leads from Zoho', description: 'Go to Zoho CRM Settings > Data Administration > Export Data and download your Leads and Contacts in CSV format.' },
+      { title: 'Step 2: 1-Click Upload to AI Closer', description: 'Upload your CSV to AI Closer with instant duplicate phone number detection and automatic pipeline mapping.' },
+      { title: 'Step 3: Download Android App & Start Closing', description: 'Sales reps download the AI Closer app, log in, and begin dialing from their SIM with automated background call recording instantly.' }
+    ],
+    faqs: [
+      {
+        question: 'Why is AI Closer better suited for Indian outbound sales than Zoho CRM?',
+        answer: 'Zoho CRM is a complex enterprise platform built around email workflows and expensive VoIP phone systems. In India, sales happen over mobile phone calls and WhatsApp. AI Closer provides native SIM calling (95% pickup rates), background call recording, dual WhatsApp sync, and in-call UPI payments at flat ₹399/mo.'
+      },
+      {
+        question: 'Does AI Closer require telephony pulse fees like Zoho PhoneBridge?',
+        answer: 'No. AI Closer uses the salesperson’s existing unlimited Android SIM card plan. There are zero per-minute telephony charges, zero VoIP server fees, and zero hidden connection costs.'
+      },
+      {
+        question: 'How fast can a 10-person telecalling team migrate from Zoho CRM to AI Closer?',
+        answer: 'Migration takes under 10 minutes. Export your leads from Zoho into a spreadsheet, upload to AI Closer, and download the mobile app.'
+      }
+    ],
+    relatedBlogSlug: 'zoho-crm-vs-ai-closer-sim-based-crm-comparison-2026'
   },
 ];
 
